@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet"href="css/bootstrap.min.css">
+     <link rel="stylesheet"href="css/all.min.css">
+    <link rel="stylesheet"href="style.css">
+
+</head>
+<body>
+    <div class="container">
+        <div class="w-75 mx-auto py-5">
+            <div class="form-group mb-3">
+                <label for="productName" class="mb-2">productName</label>
+                <input type="text"class="form-control" id="productName"/>
+            </div>
+            <div class="form-group mb-3">
+                <label for="productModel" class="mb-2">productModel</label>
+                <input type="text"class="form-control" id="productModel"/>
+            </div>
+            <div class="form-group mb-3">
+                <label for="price" class="mb-2">price</label>
+                <input type="number"class="form-control" id="price"/>
+            </div>
+            <div class="form-group mb-3">
+                <label for="productDesc" class="mb-2">productDescribtion</label>
+                <textarea name="productDesc"class="form-control" id="productDesc"></textarea>
+            </div>
+            <button onclick="displayproduct()" id="submit-btn" class="btn btn-primary ">submit</button>
+        <button onclick="addProduct()"id="addProductBtn" class="btn btn-primary">Add product</button>
+        <button id="updateProductBtn" class="btn btn-warning d-none">Update product</button>
+    </div>
+
+        <div class="w-75 mx-auto py-5">
+            <h4>search...</h4>
+            <input oninput="searchByName(this.value)" type="text"class="form-control"/>
+        </div>
+        <table class="table text-white text-center w-75 mx-auto">
+            <thead>
+                <th>index</th>
+                <th>Name</th>
+                <th>price</th>
+                <th>model</th>
+                <th>desc</th>
+                <th>update</th>
+                <th>delete</th>
+            </thead>
+            <tbody id="tBody">
+                
+
+            </tbody>
+        </table>
+    </div>
+
+    <script src="index.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
